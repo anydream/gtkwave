@@ -1,0 +1,20 @@
+msys2 mingw64
+
+pacman -S mingw-w64-x86_64-tcl
+pacman -S mingw-w64-x86_64-tk
+pacman -S mingw-w64-x86_64-gperf
+
+pacman -S mingw-w64-x86_64-meson
+pacman -S mingw-w64-x86_64-glib2
+pacman -S mingw-w64-x86_64-gobject-introspection
+pacman -S mingw-w64-x86_64-gtk3
+pacman -S mingw-w64-x86_64-gtk4
+pacman -S mingw-w64-x86_64-desktop-file-utils
+pacman -S flex
+pacman -S diffutils
+
+#pacman -S mingw-w64-x86_64-toolchain
+
+#./configure  --with-tcl=/c/msys64/mingw64/lib --with-tk=/c/msys64/mingw64/lib
+
+meson setup build && cd build && meson install
